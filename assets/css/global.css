@@ -5,6 +5,12 @@
 .content{
     padding: 1rem;
 }
+@media screan and (min-width: 992px){
+    .content{ max-width: 992px;
+        margin: 0 auto;
+
+    }
+}
 
 .pokemon-list{
     list-style: none;
@@ -21,15 +27,20 @@
     margin: 0.5rem;
     padding: 2rem 1rem;
     background-color: #49d0b0;
-    color: #fff;
+    
     border-radius: 1rem;
    
 
+}
+.pokemon .name{
+    color: #fff;
+    margin: 0.25rem 0;
 }
 .pokemon .number{
     color: #000;
     opacity: 0.3;
     text-align: right;
+    font-size: 0.625rem;
 }
 .pokemon .types{
     padding: 0;
@@ -38,10 +49,21 @@
 }
 .pokemon .detail img{
     max-width: 100%;
-    height: 110px;
+    height: 70px;
 }
 
 .detail{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.types .type {
+    background-color: #61e1ca;
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    font-size: .625rem;
+    margin: 0.25rem 0;
+    border-radius: 1rem;
 }
