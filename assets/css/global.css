@@ -12,23 +12,7 @@ body{
     height: 100vh;
     width: 100vw;
 }
-@media screan and (min-width: 992px){
-    .content{ max-width: 992px;
-        height: auto;
-        margin: 0 auto;
-        border-radius: 1rem;
 
-    }
-}
-
-.pokemon-list{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    
-}
 @media screan and (min-width: 380px){
     .pokemon-list{ 
     
@@ -43,17 +27,32 @@ body{
 }
 
 @media screan and (min-width: 992px){
+    
+    .content{
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+    
     .pokemon-list{ 
     
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
-
+.pokemons{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    
+}
 .pokemon{
     display: flex;
     flex-direction: column;
     margin: 0.5rem;
-    padding: 2rem 1rem;
+    padding:  1rem;
     background-color: #49d0b0;
     
     border-radius: 1rem;
@@ -61,8 +60,9 @@ body{
 
 }
 .pokemon .name{
+    text-transform: capitalize;
     color: #fff;
-    margin: 0.25rem 0;
+    margin: 0.25rem;
 }
 .pokemon .number{
     color: #000;
@@ -94,4 +94,40 @@ body{
     font-size: .625rem;
     margin: 0.25rem 0;
     border-radius: 1rem;
+    text-align: center;
+    filter: brightness(1.1);
 }
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.pagination button{
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0;
+    font-size: .625rem;
+    color:#fff;
+    background-color:#6c79db;
+    border: none;
+    border-radius: 1rem;
+}
+/* Pokemon Type Colors */
+.grass{ background-color: #7bc240; }
+.poison{ background-color: #a43e95; }
+.fire{ background-color: #f08030; }
+.flying{ background-color: #a890f0; }
+.water{ background-color: #678fee; }
+.electric{ background-color: #f8d030; }
+.bug{ background-color: #a8b820; }
+.rock{ background-color: #b8a038; }
+.ghost{ background-color: #705898; }
+.ice{ background-color: #98d8d8; }
+.dragon{ background-color: #7038f8; }
+.dark{ background-color: #705848; }
+.steel{ background-color: #b8b8d0; }
+.fairy{ background-color: #ee99ac; }
